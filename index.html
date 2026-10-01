@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
 <title>Osteria dei Mosaici · Cucina pugliese in Via Paravia, Milano</title>
 <meta name="description" content="L'osteria pugliese di famiglia in Via Paravia, Milano: orecchiette, cozze, stracciatella e il menù del giorno a prezzo fisso. Un mosaico di Puglia, come a casa.">
 <link rel="canonical" href="https://rotenzark.github.io/osteria-dei-mosaici/">
@@ -15,9 +16,7 @@
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="fonts/fonts.css?v=1">
 <link rel="stylesheet" href="css/styles.css?v=1">
 <script type="application/ld+json">
 {
@@ -28,7 +27,10 @@
   "image": "https://rotenzark.github.io/osteria-dei-mosaici/img/hero.jpg",
   "url": "https://rotenzark.github.io/osteria-dei-mosaici/",
   "telephone": "+39 331 415 7800",
-  "servesCuisine": ["Pugliese", "Italiana"],
+  "servesCuisine": [
+    "Pugliese",
+    "Italiana"
+  ],
   "priceRange": "€€",
   "address": {
     "@type": "PostalAddress",
@@ -37,10 +39,32 @@
     "postalCode": "20148",
     "addressCountry": "IT"
   },
-  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.2", "reviewCount": "545" },
   "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "12:00", "closes": "14:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Wednesday","Thursday","Friday","Saturday"], "opens": "19:30", "closes": "22:00" }
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "12:00",
+      "closes": "14:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "19:30",
+      "closes": "22:00"
+    }
   ]
 }
 </script>
@@ -265,7 +289,7 @@
     </div>
   </div>
   <div class="dove__map">
-    <iframe title="Mappa: Osteria dei Mosaici, Via Paravia 26, Milano" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Osteria%20Paravia%2026%20Ai%20Mosaici%20Milano&output=embed"></iframe>
+    <div class="mappa-clic" data-mappa-clic style="--mappa-h: 320px"><template><iframe title="Mappa: Osteria dei Mosaici, Via Paravia 26, Milano" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Osteria%20Paravia%2026%20Ai%20Mosaici%20Milano&output=embed"></iframe></template><div class="mappa-clic__velo"><a class="mappa-clic__btn" href="https://www.google.com/maps/search/?api=1&amp;query=Osteria%20Paravia%2026%20Ai%20Mosaici%20Milano" target="_blank" rel="noopener">Mostra la mappa</a><p class="mappa-clic__nota">La mappa è di Google: aprendola, Google riceve il tuo indirizzo IP e può usare i suoi cookie.</p></div></div>
   </div>
 </section>
 
@@ -313,6 +337,7 @@
     </div>
     <p class="site-footer__disclaimer" data-i18n="foot.disclaimer">Sito dimostrativo (concept) realizzato da Bespoke Studio a scopo di presentazione. Non è il sito ufficiale dell'attività. Immagini e recensioni dei rispettivi proprietari.</p>
   </div>
+  <p class="privacy-link"><a href="privacy.html">Privacy</a></p>
 </footer>
 
 <!-- LIGHTBOX -->
@@ -324,5 +349,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="js/main.js?v=2"></script>
+<script src="js/mappa-clic.js?v=1" defer></script>
 </body>
 </html>
